@@ -1,19 +1,10 @@
 import type { Demo } from "../types";
-import { DemoPlaceholder } from "@/components/demo-placeholder";
-
-function ApiSlotsDemo() {
-  return (
-    <DemoPlaceholder
-      title="API — Available slots"
-      blurb="Query the Cal.com API for available slots and render them in your own UI."
-    />
-  );
-}
+import { ApiSlotsDemo } from "./component";
 
 const demo: Demo = {
   slug: "api-slots",
-  name: "API — Available slots",
-  description: "Fetch and render slots via the Cal.com API.",
+  name: "Custom booking UI",
+  description: "Fetch available time slots for an event type via API and render a custom booking UI.",
   category: "API",
   Component: ApiSlotsDemo,
 };
