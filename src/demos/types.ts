@@ -1,6 +1,6 @@
 import type { ComponentType } from "react";
 
-export type DemoCategory = "Embeds" | "Platform" | "API";
+export type DemoCategory = "Embeds" | "Platform" | "API" | "Concepts";
 
 export type Demo = {
   slug: string;

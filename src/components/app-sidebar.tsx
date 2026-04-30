@@ -7,10 +7,12 @@ import {
   AtomIcon,
   CalendarDaysIcon,
   CodeXmlIcon,
+  CoinsIcon,
   LayoutGridIcon,
   MousePointerClickIcon,
   SparklesIcon,
   WebhookIcon,
+  WorkflowIcon,
   ZapIcon,
 } from "lucide-react";
 import {
@@ -33,6 +35,7 @@ const CATEGORY_ICON: Record<DemoCategory, React.ComponentType> = {
   Embeds: MousePointerClickIcon,
   Platform: AtomIcon,
   API: CodeXmlIcon,
+  Concepts: WorkflowIcon,
 };
 
 const DEMO_ICON: Record<string, React.ComponentType> = {
@@ -41,6 +44,7 @@ const DEMO_ICON: Record<string, React.ComponentType> = {
   "embed-floating-button": ZapIcon,
   "atoms-booker": CalendarDaysIcon,
   "api-slots": WebhookIcon,
+  "api-credits-flow": CoinsIcon,
 };
 
 function DemoMenuItem({ demo, active }: { demo: Demo; active: boolean }) {

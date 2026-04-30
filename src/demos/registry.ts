@@ -2,18 +2,20 @@ import type { Demo, DemoCategory } from "./types";
 import embedPopup from "./embed-popup";
 import embedInline from "./embed-inline";
 import apiSlots from "./api-slots";
+import apiCreditsFlow from "./api-credits-flow";
 
 export const demos: Demo[] = [
   embedPopup,
   embedInline,
   apiSlots,
+  apiCreditsFlow,
 ];
 
 export function getDemoBySlug(slug: string): Demo | undefined {
   return demos.find((d) => d.slug === slug);
 }
 
-const CATEGORY_ORDER: DemoCategory[] = ["Embeds", "API"];
+const CATEGORY_ORDER: DemoCategory[] = ["Embeds", "API", "Concepts"];
 
 export function getDemosByCategory(): Array<{
   category: DemoCategory;
