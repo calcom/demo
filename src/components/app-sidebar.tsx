@@ -5,15 +5,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   AtomIcon,
-  CalendarDaysIcon,
   CodeXmlIcon,
-  CoinsIcon,
-  LayoutGridIcon,
   MousePointerClickIcon,
-  SparklesIcon,
-  WebhookIcon,
   WorkflowIcon,
-  ZapIcon,
 } from "lucide-react";
 import {
   Sidebar,
@@ -38,24 +32,15 @@ const CATEGORY_ICON: Record<DemoCategory, React.ComponentType> = {
   Concepts: WorkflowIcon,
 };
 
-const DEMO_ICON: Record<string, React.ComponentType> = {
-  "embed-popup": SparklesIcon,
-  "embed-inline": LayoutGridIcon,
-  "embed-floating-button": ZapIcon,
-  "atoms-booker": CalendarDaysIcon,
-  "api-slots": WebhookIcon,
-  "api-credits-flow": CoinsIcon,
-};
-
 function DemoMenuItem({ demo, active }: { demo: Demo; active: boolean }) {
-  const Icon = DEMO_ICON[demo.slug];
+  const Icon = demo.icon;
   return (
     <SidebarMenuItem>
       <SidebarMenuButton
         data-active={active || undefined}
         render={<Link href={`/${demo.slug}`} />}
       >
-        {Icon ? <Icon /> : null}
+        <Icon />
         <span>{demo.name}</span>
       </SidebarMenuButton>
     </SidebarMenuItem>

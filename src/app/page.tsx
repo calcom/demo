@@ -32,21 +32,27 @@ export default function Home() {
             <Badge variant="secondary">{demos.length}</Badge>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {demos.map((demo) => (
-              <Card
-                key={demo.slug}
-                render={<Link href={`/${demo.slug}`} />}
-                className="group transition-colors hover:bg-accent/30"
-              >
-                <CardHeader>
-                  <div className="flex items-start justify-between gap-2">
+            {demos.map((demo) => {
+              const Icon = demo.icon;
+              return (
+                <Card
+                  key={demo.slug}
+                  render={<Link href={`/${demo.slug}`} />}
+                  className="group transition-colors hover:bg-accent/30"
+                >
+                  <CardHeader>
+                    <div className="flex items-start justify-between gap-2">
+                      <span className="inline-flex size-9 items-center justify-center rounded-lg bg-primary/10 text-primary [&_svg]:size-4 mb-1">
+                        <Icon />
+                      </span>
+                      <ArrowUpRightIcon className="size-4 shrink-0 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                    </div>
                     <CardTitle className="text-base">{demo.name}</CardTitle>
-                    <ArrowUpRightIcon className="size-4 shrink-0 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                  </div>
-                  <CardDescription>{demo.description}</CardDescription>
-                </CardHeader>
-              </Card>
-            ))}
+                    <CardDescription>{demo.description}</CardDescription>
+                  </CardHeader>
+                </Card>
+              );
+            })}
           </div>
         </section>
       ))}

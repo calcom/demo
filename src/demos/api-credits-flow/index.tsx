@@ -296,6 +296,7 @@ const demo: Demo = {
   description:
     "Architecture pattern for gating Cal.com bookings on your own credit or billing system, then settling the charge via webhook.",
   category: "Concepts",
+  icon: CoinsIcon,
   Component: CreditsFlowDemo,
 };
 
