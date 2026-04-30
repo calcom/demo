@@ -1,14 +1,5 @@
 import type { Demo } from "../types";
-import { DemoPlaceholder } from "@/components/demo-placeholder";
-
-function EmbedPopupDemo() {
-  return (
-    <DemoPlaceholder
-      title="Popup embed"
-      blurb="Open a Cal.com booking page in a modal triggered by any element on your site."
-    />
-  );
-}
+import { EmbedPopupDemo } from "./component";
 
 const demo: Demo = {
   slug: "embed-popup",
