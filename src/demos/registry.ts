@@ -4,6 +4,7 @@ import embedInline from "./embed-inline";
 import apiSlots from "./api-slots";
 import apiCreditsFlow from "./api-credits-flow";
 import apiEhrSync from "./api-ehr-sync";
+import apiRoomAssignment from "./api-room-assignment";
 
 export const demos: Demo[] = [
   embedPopup,
@@ -11,6 +12,7 @@ export const demos: Demo[] = [
   apiSlots,
   apiCreditsFlow,
   apiEhrSync,
+  apiRoomAssignment,
 ];
 
 export function getDemoBySlug(slug: string): Demo | undefined {
