@@ -5,6 +5,7 @@ import apiSlots from "./api-slots";
 import apiCreditsFlow from "./api-credits-flow";
 import apiEhrSync from "./api-ehr-sync";
 import apiRoomAssignment from "./api-room-assignment";
+import apiSmsConfirmation from "./api-sms-confirmation";
 
 export const demos: Demo[] = [
   embedPopup,
@@ -13,6 +14,7 @@ export const demos: Demo[] = [
   apiCreditsFlow,
   apiEhrSync,
   apiRoomAssignment,
+  apiSmsConfirmation,
 ];
 
 export function getDemoBySlug(slug: string): Demo | undefined {
