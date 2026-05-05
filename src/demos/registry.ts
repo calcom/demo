@@ -3,12 +3,14 @@ import embedPopup from "./embed-popup";
 import embedInline from "./embed-inline";
 import apiSlots from "./api-slots";
 import apiCreditsFlow from "./api-credits-flow";
+import apiEhrSync from "./api-ehr-sync";
 
 export const demos: Demo[] = [
   embedPopup,
   embedInline,
   apiSlots,
   apiCreditsFlow,
+  apiEhrSync,
 ];
 
 export function getDemoBySlug(slug: string): Demo | undefined {
